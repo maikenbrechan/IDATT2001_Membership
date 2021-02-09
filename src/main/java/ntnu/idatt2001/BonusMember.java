@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class BonusMember {
     private int membernumber;
-    private LocalDate enrolledDate;
-    private int bonusPointsBalance;
+    private final LocalDate enrolledDate;
+    private int bonusPointsBalance = 0;
     private String name;
     private String eMailAdress;
     private String password;
@@ -29,6 +29,12 @@ public class BonusMember {
             this.membership=new BasicMembership();
         }
     }
+    public int getMemberNumber(){return membernumber;}
+
+    public void setMembernumber(int newNumber){this.membernumber = newNumber;}
+    
+    public void setName (String newName){this.name=newName;}
+    public void seteMailAdress(String newEmail){this.eMailAdress = newEmail;}
 
     public String geteMailAdress() {
         return eMailAdress;
@@ -38,7 +44,7 @@ public class BonusMember {
         if(newPoints<1){
             throw new IllegalArgumentException("Unvalid amount of points");
         }
-            this.bonusPointsBalance+=newPoints;
+            membership.registerBonusPoints(bonusPointsBalance, newPoints);
     }
 
     public boolean checkPassword(String typedIn){
@@ -56,4 +62,18 @@ public class BonusMember {
             this.membership=newMembership;
             }
         }
+
+    @Override
+    public String toString() {
+        return "BonusMember{" +
+                "membernumber=" + membernumber +
+                ",\n enrolledDate=" + enrolledDate +
+                ",\n bonusPointsBalance=" + bonusPointsBalance +
+                ",\n name='" + name + '\'' +
+                ",\n eMailAdress='" + eMailAdress + '\'' +
+                ",\n password='" + password + '\'' +
+                ",\n membership=" + membership +
+                '}';
     }
+}
+

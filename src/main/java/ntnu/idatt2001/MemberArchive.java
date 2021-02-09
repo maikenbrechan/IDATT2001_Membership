@@ -22,17 +22,21 @@ import java.util.HashMap;
         }
 
         /**
-         * Adds a new member to the register. The new member must have a memebr number
-         * different from exsisting members. If not, the new member will not be added.
+         * Adds a new member to the register. The new member must have a member number
+         * different from existing members. If not, the new member will not be added.
          *
          * @return {@code true} if the new member was added successfully,
          *         {@code false} if the new member could not be added, due to a
-         *          membernumber that allready exsists.
+         *          membernumber that already exists.
          */
         public boolean addMember(BonusMember bonusMember) {
-            boolean success = false;
-            //TODO: Fill in your solution
-            return success;
+            for(BonusMember member : members.values()) {
+                if(bonusMember.getMemberNumber()==member.getMemberNumber()) {
+                    return false;
+                }
+            }
+            members.put(bonusMember.getMemberNumber(), bonusMember);
+            return true;
         }
 
         /**
@@ -47,7 +51,12 @@ import java.util.HashMap;
          */
         public boolean registerPoints(int memberNumber, int bonusPoints) {
             boolean success = false;
-            //TODO: Fill in your solution
+            for(BonusMember member : members.values()){
+                if(member.getMemberNumber() == memberNumber){
+                    member.registerBonusPoints(bonusPoints);
+                    success = true;
+                }
+            }
             return success;
         }
 
@@ -55,7 +64,9 @@ import java.util.HashMap;
          * Lists all members to the console.
          */
         public void listAllMembers() {
-            //TODO: Fill in your solution
+            for(BonusMember member : members.values()){
+                System.out.println(member.toString());
+            }
         }
 
 
