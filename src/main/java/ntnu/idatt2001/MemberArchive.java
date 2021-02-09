@@ -86,5 +86,14 @@ import java.util.HashMap;
             this.members.put(member.getMemberNumber(), member);
 
         }
+
+        public int findPoints(int membernumber, String password){
+            for(BonusMember member : members.values()){
+                if(member.getMemberNumber()==membernumber && member.checkPassword(password)){
+                    return member.getBonusPointsBalance();
+                }
+            }
+            return -1;
+        }
     }
 

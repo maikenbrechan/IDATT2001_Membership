@@ -32,7 +32,7 @@ public class BonusMember {
     public int getMemberNumber(){return membernumber;}
 
     public void setMembernumber(int newNumber){this.membernumber = newNumber;}
-    
+    public int getBonusPointsBalance(){return bonusPointsBalance;}
     public void setName (String newName){this.name=newName;}
     public void seteMailAdress(String newEmail){this.eMailAdress = newEmail;}
 
