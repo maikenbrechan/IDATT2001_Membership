@@ -1,0 +1,3 @@
+Er veldig usikke på hva jeg gjør når jeg bygger prosjektet i pom-fila,
+det blir stort sett at jeg kopierer fra tidligere prosjekter.
+Lurer også på hvor nøye JUnitTestene skal være?

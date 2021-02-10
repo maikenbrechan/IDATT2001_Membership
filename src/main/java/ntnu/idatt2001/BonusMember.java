@@ -33,7 +33,9 @@ public class BonusMember {
 
     public void setMembernumber(int newNumber){this.membernumber = newNumber;}
     public int getBonusPointsBalance(){return bonusPointsBalance;}
-    public void setName (String newName){this.name=newName;}
+
+    public void setName (String newName){ this.name=newName;}
+
     public void seteMailAdress(String newEmail){this.eMailAdress = newEmail;}
 
     public String geteMailAdress() {
@@ -75,5 +77,6 @@ public class BonusMember {
                 ",\n membership=" + membership +
                 '}';
     }
+
 }
 

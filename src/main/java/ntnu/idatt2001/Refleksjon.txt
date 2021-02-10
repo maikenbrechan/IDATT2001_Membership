@@ -1,0 +1,9 @@
+Ut ifra oppgaven jeg løste i Oblig 2 vil jeg si at det er enkelt å legge til et nytt fordelsnivå.
+Dette fordi jeg kun trenger å lage en ny subklasse av Membership, Bronse hvor jeg har de samme to
+abstrakte metodene. Deretter legge inn nye grenser i kontruktøren som holder kontroll på medlemskap
+nivået. Det vil si at det er kun to ting jeg trenger å gjøre for å opprette Bronsemedlemskap.
+Legge inn poenggrensene i kontruktøren og opprette en ny klasse.
+
+Siden det viser seg å være enkelt å opprette et nytt nivå vil jeg trekke fram at dette er blant fordelene
+med Arv og Polymorfi. Koden blir lett, man trenger ikke skrive om hele koden for å legge til endringer og
+man får gjenbruk av klassen Membership.
