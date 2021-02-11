@@ -6,10 +6,6 @@ public class BasicMembership extends Membership{
     vil alltid ha navnet Basic
     */
 
-    public BasicMembership(){
-        super("Basic");
-    }
-
     @Override
     public int registerBonusPoints(int bonusPointsBalance, int newPoints) {
         return bonusPointsBalance+newPoints;

@@ -9,10 +9,6 @@ public class GoldMembership extends Membership{
     vil alltid ha navnet Gold
     */
 
-    public GoldMembership(){
-        super("Gold");
-    }
-
     @Override
     public int registerBonusPoints(int bonusPointsBalance, int newPoints) {
         int totalPoints = 0;

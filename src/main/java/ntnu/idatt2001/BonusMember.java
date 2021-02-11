@@ -19,10 +19,10 @@ public class BonusMember {
         this.bonusPointsBalance=bonusPoints;
         this.name=name;
         this.eMailAdress=eMailAdress;
-        if(bonusPointsBalance>GOLD_LIMIT){
+        if(bonusPointsBalance>=GOLD_LIMIT){
             this.membership = new GoldMembership();
         }
-        else if(bonusPointsBalance>SILVER_LIMIT){
+        else if(bonusPointsBalance>=SILVER_LIMIT){
             this.membership = new SilverMembership();
         }
         else{
@@ -74,7 +74,7 @@ public class BonusMember {
                 ",\n name='" + name + '\'' +
                 ",\n eMailAdress='" + eMailAdress + '\'' +
                 ",\n password='" + password + '\'' +
-                ",\n membership=" + membership +
+                ",\n membership=" + membership.getMembershipName() +
                 '}';
     }
 

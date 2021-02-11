@@ -8,9 +8,6 @@ public class SilverMembership extends Membership{
     /* Setter navnet til medlemskapet via objektvariabel i Membership, slik at objekter er SilverMembership
     vil alltid ha navnet Silver
     */
-    public SilverMembership(){
-        super("Silver");
-    }
 
     @Override
     public int registerBonusPoints(int bonusPointsBalance, int newPoints) {
